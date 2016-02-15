@@ -266,7 +266,8 @@ class ExpGolomb {
           case 15: sarRatio = [3,2]; break;
           case 16: sarRatio = [2,1]; break;
           case 255: {
-            sarRatio = [this.readUByte() << 8 | this.readUByte(), this.readUByte() << 8 | this.readUByte()];
+            // Disable due to issues with Filmon.tv streams (https://github.com/dailymotion/hls.js/pull/252)
+            //sarRatio = [this.readUByte() << 8 | this.readUByte(), this.readUByte() << 8 | this.readUByte()];
             break;
           }
         }
